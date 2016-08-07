@@ -8,6 +8,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 import com.kaushal.toolkit.compass.CompassActivity;
+import com.kaushal.toolkit.db_meter.DbMeterActivity;
 import com.kaushal.toolkit.flash.FlashActivity;
 import com.kaushal.toolkit.level.LevelActivity;
 
@@ -35,6 +36,17 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void scale_button(View view) {
+        view.startAnimation(alphaAnimation);
+    }
+
+    public void db_meter_button(View view) {
+        view.startAnimation(alphaAnimation);
+        Intent intent;
+        intent = new Intent(this, DbMeterActivity.class);
+        startActivity(intent);
+    }
+
     public void level_button(View view) {
         view.startAnimation(alphaAnimation);
         Intent intent;
@@ -47,14 +59,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void photo_meter_button(View view) {
-        view.startAnimation(alphaAnimation);
-    }
-
-    public void db_meter_button(View view) {
-        view.startAnimation(alphaAnimation);
-    }
-
-    public void scale_button(View view) {
         view.startAnimation(alphaAnimation);
     }
 
