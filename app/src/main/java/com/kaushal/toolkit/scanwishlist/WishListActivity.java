@@ -16,7 +16,7 @@ import com.kaushal.toolkit.R;
 
 import java.util.List;
 
-public class ListViewAndroid extends Activity {
+public class WishListActivity extends Activity {
     ListView listView;
     CustomAdapter adapter;
     ItemsDataSource datasource;

@@ -6,12 +6,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Toast;
 
 import com.kaushal.toolkit.compass.CompassActivity;
 import com.kaushal.toolkit.db_meter.DbMeterActivity;
 import com.kaushal.toolkit.flash.FlashActivity;
 import com.kaushal.toolkit.level.LevelActivity;
-import com.kaushal.toolkit.scanwishlist.ScanWishListActivity;
+import com.kaushal.toolkit.scanwishlist.BarCodeScanner;
+import com.kaushal.toolkit.scanwishlist.WishListActivity;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 public class ToolKitActivity extends AppCompatActivity {
     Animation alphaAnimation;
@@ -21,6 +25,8 @@ public class ToolKitActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.toolkit_main);
         alphaAnimation = AnimationUtils.loadAnimation(this, R.anim.button_alpha);
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this).build();
+        ImageLoader.getInstance().init(config);
     }
 
     public void flash_button(View view) {
@@ -58,15 +64,19 @@ public class ToolKitActivity extends AppCompatActivity {
     public void barcode_scanner_button(View view) {
         view.startAnimation(alphaAnimation);
         Intent intent;
-        intent = new Intent(this, ScanWishListActivity.class);
+        intent = new Intent(this, BarCodeScanner.class);
         startActivity(intent);
     }
 
     public void photo_meter_button(View view) {
         view.startAnimation(alphaAnimation);
+        Toast.makeText(ToolKitActivity.this, "In progress", Toast.LENGTH_SHORT).show();
     }
 
     public void wishlist_button(View view) {
         view.startAnimation(alphaAnimation);
+        Intent intent;
+        intent = new Intent(this, WishListActivity.class);
+        startActivity(intent);
     }
 }

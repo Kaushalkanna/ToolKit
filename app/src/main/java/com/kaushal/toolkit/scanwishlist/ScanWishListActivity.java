@@ -8,8 +8,6 @@ import android.view.View;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.kaushal.toolkit.R;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 public class ScanWishListActivity extends Activity {
     private GoogleApiClient client;
@@ -19,8 +17,6 @@ public class ScanWishListActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.scanwishlist_main);
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this).build();
-        ImageLoader.getInstance().init(config);
     }
 
     public void barcode_scanner(View v) {
@@ -31,7 +27,7 @@ public class ScanWishListActivity extends Activity {
 
     public void listView(View v) {
         Intent intent;
-        intent = new Intent(this, ListViewAndroid.class);
+        intent = new Intent(this, WishListActivity.class);
         startActivity(intent);
     }
 

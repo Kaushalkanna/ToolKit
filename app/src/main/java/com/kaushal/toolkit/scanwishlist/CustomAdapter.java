@@ -23,7 +23,7 @@ public class CustomAdapter extends BaseAdapter {
     ItemsDataSource datasource;
     private static LayoutInflater inflater = null;
 
-    public CustomAdapter(ListViewAndroid activity, List<Item> values) {
+    public CustomAdapter(WishListActivity activity, List<Item> values) {
         result = values;
         context = activity;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
