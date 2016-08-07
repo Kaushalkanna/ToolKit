@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class MySQLiteHelper extends SQLiteOpenHelper {
+public class ItemsDbHelper extends SQLiteOpenHelper {
 
     public static final String TABLE_ITEMS = "items";
     public static final String COLUMN_UPC = "upc";
@@ -27,7 +27,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + COLUMN_PRODUCTURL + " text, "
             + COLUMN_STORENAME + " text)";
 
-    public MySQLiteHelper(Context context) {
+    public ItemsDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 

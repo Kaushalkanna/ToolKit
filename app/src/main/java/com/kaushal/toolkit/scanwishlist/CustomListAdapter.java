@@ -17,13 +17,13 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.List;
 
-public class CustomAdapter extends BaseAdapter {
+public class CustomListAdapter extends BaseAdapter {
     List<Item> result;
     Context context;
     ItemsDataSource datasource;
     private static LayoutInflater inflater = null;
 
-    public CustomAdapter(WishListActivity activity, List<Item> values) {
+    public CustomListAdapter(WishListActivity activity, List<Item> values) {
         result = values;
         context = activity;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

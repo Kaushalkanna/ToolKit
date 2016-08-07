@@ -26,7 +26,7 @@ import org.json.JSONObject;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
-public class BarCodeScanner extends Activity implements ZXingScannerView.ResultHandler {
+public class ScannerActivity extends Activity implements ZXingScannerView.ResultHandler {
     private ZXingScannerView mScannerView;
     private ItemsDataSource datasource;
     private String url = "http://www.searchupc.com/handlers/upcsearch.ashx?" +

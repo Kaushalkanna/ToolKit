@@ -12,7 +12,7 @@ import com.kaushal.toolkit.compass.CompassActivity;
 import com.kaushal.toolkit.db_meter.DbMeterActivity;
 import com.kaushal.toolkit.flash.FlashActivity;
 import com.kaushal.toolkit.level.LevelActivity;
-import com.kaushal.toolkit.scanwishlist.BarCodeScanner;
+import com.kaushal.toolkit.scanwishlist.ScannerActivity;
 import com.kaushal.toolkit.scanwishlist.WishListActivity;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -64,7 +64,7 @@ public class ToolKitActivity extends AppCompatActivity {
     public void barcode_scanner_button(View view) {
         view.startAnimation(alphaAnimation);
         Intent intent;
-        intent = new Intent(this, BarCodeScanner.class);
+        intent = new Intent(this, ScannerActivity.class);
         startActivity(intent);
     }
 

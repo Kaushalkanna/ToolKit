@@ -21,7 +21,7 @@ public class ScanWishListActivity extends Activity {
 
     public void barcode_scanner(View v) {
         Intent intent;
-        intent = new Intent(this, BarCodeScanner.class);
+        intent = new Intent(this, ScannerActivity.class);
         startActivity(intent);
     }
 

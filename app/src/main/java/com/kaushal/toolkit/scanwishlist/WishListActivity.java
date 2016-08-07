@@ -18,7 +18,7 @@ import java.util.List;
 
 public class WishListActivity extends Activity {
     ListView listView;
-    CustomAdapter adapter;
+    CustomListAdapter adapter;
     ItemsDataSource datasource;
     List<Item> values;
     Context context;
@@ -31,7 +31,7 @@ public class WishListActivity extends Activity {
         datasource.open();
         values = datasource.getAllItems();
         context = this;
-        adapter = new CustomAdapter(this, values);
+        adapter = new CustomListAdapter(this, values);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> a, View v, final int position, long id) {

@@ -27,7 +27,7 @@
         <activity android:name=".level.LevelActivity"> </activity>
         <activity android:name=".db_meter.DbMeterActivity"> </activity>
         <activity android:name=".scanwishlist.ScanWishListActivity"> </activity>
-        <activity android:name=".scanwishlist.BarCodeScanner"> </activity>
+        <activity android:name=".scanwishlist.ScannerActivity"> </activity>
         <activity android:name=".scanwishlist.WishListActivity"> </activity>
     </application>
 
