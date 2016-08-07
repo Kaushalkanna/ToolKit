@@ -6,6 +6,9 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
         android:allowBackup="true"
@@ -23,6 +26,9 @@
         <activity android:name=".compass.CompassActivity"> </activity>
         <activity android:name=".level.LevelActivity"> </activity>
         <activity android:name=".db_meter.DbMeterActivity"> </activity>
+        <activity android:name=".scanwishlist.ScanWishListActivity"> </activity>
+        <activity android:name=".scanwishlist.BarCodeScanner"> </activity>
+        <activity android:name=".scanwishlist.ListViewAndroid"> </activity>
     </application>
 
 </manifest>
