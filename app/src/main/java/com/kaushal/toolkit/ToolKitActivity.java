@@ -12,8 +12,8 @@ import com.kaushal.toolkit.compass.CompassActivity;
 import com.kaushal.toolkit.db_meter.DbMeterActivity;
 import com.kaushal.toolkit.flash.FlashActivity;
 import com.kaushal.toolkit.level.LevelActivity;
-import com.kaushal.toolkit.scanwishlist.ScannerActivity;
-import com.kaushal.toolkit.scanwishlist.WishListActivity;
+import com.kaushal.toolkit.scanner.ScannerActivity;
+import com.kaushal.toolkit.wishlist.WishListActivity;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 

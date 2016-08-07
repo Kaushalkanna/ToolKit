@@ -1,4 +1,4 @@
-package com.kaushal.toolkit.scanwishlist;
+package com.kaushal.toolkit.wishlist;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

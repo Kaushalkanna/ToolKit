@@ -1,4 +1,4 @@
-package com.kaushal.toolkit.scanwishlist;
+package com.kaushal.toolkit.wishlist;
 
 /**
  * Created by xkxd061 on 7/24/16.
