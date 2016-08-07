@@ -1,4 +1,4 @@
-package com.kaushal.toolkit.scanwishlist;
+package com.kaushal.toolkit.wishlist;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +8,7 @@ import android.view.View;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.kaushal.toolkit.R;
+import com.kaushal.toolkit.scanner.ScannerActivity;
 
 public class ScanWishListActivity extends Activity {
     private GoogleApiClient client;

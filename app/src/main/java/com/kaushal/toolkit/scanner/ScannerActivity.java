@@ -1,4 +1,4 @@
-package com.kaushal.toolkit.scanwishlist;
+package com.kaushal.toolkit.scanner;
 
 
 import android.app.Activity;
@@ -19,6 +19,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.zxing.Result;
 import com.kaushal.toolkit.R;
+import com.kaushal.toolkit.wishlist.ItemsDataSource;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import org.json.JSONException;

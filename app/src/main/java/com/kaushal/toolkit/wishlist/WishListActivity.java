@@ -1,4 +1,4 @@
-package com.kaushal.toolkit.scanwishlist;
+package com.kaushal.toolkit.wishlist;
 
 import android.app.Activity;
 import android.app.AlertDialog;
