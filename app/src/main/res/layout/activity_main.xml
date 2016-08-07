@@ -19,7 +19,7 @@
 
 
             <Button
-                android:id="@+id/flash"
+                android:id="@+id/flash_button"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -28,7 +28,8 @@
                 android:layout_below="@+id/textView"
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="25dp"
-                android:background="@drawable/flash_light_icon" />
+                android:background="@drawable/flash_light_icon"
+                android:onClick="flash_button"/>
 
             <Button
                 android:id="@+id/compass"
@@ -37,19 +38,21 @@
                 android:layout_height="100dp"
                 android:layout_alignEnd="@+id/textView"
                 android:layout_alignRight="@+id/textView"
-                android:layout_alignTop="@+id/flash"
-                android:background="@drawable/compass_icon" />
+                android:layout_alignTop="@+id/flash_button"
+                android:background="@drawable/compass_icon"
+                android:onClick="compass_button"/>
 
             <Button
                 android:id="@+id/scale"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_alignLeft="@+id/flash"
-                android:layout_alignStart="@+id/flash"
-                android:layout_below="@+id/flash"
+                android:layout_alignLeft="@+id/flash_button"
+                android:layout_alignStart="@+id/flash_button"
+                android:layout_below="@+id/flash_button"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/scale_icon" />
+                android:background="@drawable/scale_icon"
+                android:onClick="scale_button"/>
 
             <Button
                 android:id="@+id/level"
@@ -60,7 +63,8 @@
                 android:layout_alignStart="@+id/compass"
                 android:layout_alignTop="@+id/scale"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/level_icon" />
+                android:background="@drawable/level_icon"
+                android:onClick="level_button"/>
 
             <Button
                 android:id="@+id/db_meter"
@@ -70,7 +74,8 @@
                 android:layout_alignLeft="@+id/scale"
                 android:layout_alignStart="@+id/scale"
                 android:layout_alignTop="@+id/barcode_scanner"
-                android:background="@drawable/sound_meter_icon" />
+                android:background="@drawable/sound_meter_icon"
+                android:onClick="db_meter_button"/>
 
             <Button
                 android:id="@+id/barcode_scanner"
@@ -82,7 +87,8 @@
                 android:layout_below="@+id/level"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/barcode_scanner_icon"
-                android:layout_marginBottom="20dp" />
+                android:layout_marginBottom="20dp"
+                android:onClick="barcode_scanner_button"/>
 
             <TextView
                 android:id="@+id/textView"
@@ -92,7 +98,7 @@
                 android:layout_centerHorizontal="true"
                 android:text="Smart Tools"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="45dp" />
+                android:textSize="45sp" />
 
             <Button
                 android:layout_width="100dp"
@@ -103,7 +109,8 @@
                 android:layout_below="@+id/barcode_scanner"
                 android:layout_alignLeft="@+id/barcode_scanner"
                 android:layout_alignStart="@+id/barcode_scanner"
-                android:layout_marginBottom="20dp" />
+                android:layout_marginBottom="20dp"
+                android:onClick="wishlist_button"/>
 
             <Button
                 android:layout_width="100dp"
@@ -113,7 +120,8 @@
                 android:layout_alignLeft="@+id/db_meter"
                 android:layout_alignStart="@+id/db_meter"
                 android:background="@drawable/photo_meter_icon"
-                android:layout_marginBottom="20dp" />
+                android:layout_marginBottom="20dp"
+                android:onClick="photo_meter_button"/>
 
         </RelativeLayout>
     </ScrollView>

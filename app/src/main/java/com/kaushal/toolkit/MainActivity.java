@@ -1,13 +1,50 @@
 package com.kaushal.toolkit;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 public class MainActivity extends AppCompatActivity {
+    Animation alphaAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        alphaAnimation = AnimationUtils.loadAnimation(this, R.anim.button_alpha);
+    }
+
+    public void flash_button(View view) {
+        view.startAnimation(alphaAnimation);
+    }
+
+    public void barcode_scanner_button(View view) {
+        view.startAnimation(alphaAnimation);
+    }
+
+    public void photo_meter_button(View view) {
+        view.startAnimation(alphaAnimation);
+    }
+
+    public void db_meter_button(View view) {
+        view.startAnimation(alphaAnimation);
+    }
+
+    public void level_button(View view) {
+        view.startAnimation(alphaAnimation);
+    }
+
+    public void scale_button(View view) {
+        view.startAnimation(alphaAnimation);
+    }
+
+    public void compass_button(View view) {
+        view.startAnimation(alphaAnimation);
+    }
+
+    public void wishlist_button(View view) {
+        view.startAnimation(alphaAnimation);
     }
 }
