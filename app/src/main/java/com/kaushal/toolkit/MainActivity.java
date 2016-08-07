@@ -1,10 +1,13 @@
 package com.kaushal.toolkit;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+
+import com.kaushal.toolkit.flash.FlashActivity;
 
 public class MainActivity extends AppCompatActivity {
     Animation alphaAnimation;
@@ -18,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void flash_button(View view) {
         view.startAnimation(alphaAnimation);
+        Intent intent;
+        intent = new Intent(this, FlashActivity.class);
+        startActivity(intent);
     }
 
     public void barcode_scanner_button(View view) {
