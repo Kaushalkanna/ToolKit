@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
@@ -20,6 +22,7 @@
         <activity android:name=".flash.FlashActivity"> </activity>
         <activity android:name=".compass.CompassActivity"> </activity>
         <activity android:name=".level.LevelActivity"> </activity>
+        <activity android:name=".db_meter.DbMeterActivity"> </activity>
     </application>
 
 </manifest>
