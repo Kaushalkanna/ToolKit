@@ -22,7 +22,8 @@
         android:layout_marginLeft="66dp"
         android:layout_marginStart="66dp"
         android:background="@drawable/flash_light_icon"
-        />
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -30,11 +31,12 @@
         android:layout_height="100dp"
         android:text=""
         android:id="@+id/button2"
+        android:background="@drawable/compass_icon"
         android:layout_alignTop="@+id/button"
         android:layout_toRightOf="@+id/button"
         android:layout_toEndOf="@+id/button"
-        android:background="@drawable/compass_icon"
-        />
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -66,11 +68,10 @@
         android:layout_height="100dp"
         android:text=""
         android:id="@+id/button5"
-        android:layout_below="@+id/button3"
-        android:layout_toLeftOf="@+id/button4"
-        android:layout_toStartOf="@+id/button4"
         android:background="@drawable/sound_meter_icon"
-        />
+        android:layout_alignTop="@+id/button6"
+        android:layout_alignLeft="@+id/button3"
+        android:layout_alignStart="@+id/button3" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -78,10 +79,11 @@
         android:layout_height="100dp"
         android:text=""
         android:id="@+id/button6"
+        android:background="@drawable/barcode_scanner_icon"
         android:layout_below="@+id/button4"
         android:layout_alignLeft="@+id/button4"
         android:layout_alignStart="@+id/button4"
-        android:background="@drawable/barcode_scanner_icon"/>
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
