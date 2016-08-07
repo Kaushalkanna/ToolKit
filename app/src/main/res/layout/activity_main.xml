@@ -19,7 +19,7 @@
 
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/flash"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -31,62 +31,57 @@
                 android:background="@drawable/flash_light_icon" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/compass"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_alignEnd="@+id/textView"
                 android:layout_alignRight="@+id/textView"
-                android:layout_alignTop="@+id/button"
-                android:background="@drawable/compass_icon"
-                android:text="" />
+                android:layout_alignTop="@+id/flash"
+                android:background="@drawable/compass_icon" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/scale"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_alignLeft="@+id/button"
-                android:layout_alignStart="@+id/button"
-                android:layout_below="@+id/button"
+                android:layout_alignLeft="@+id/flash"
+                android:layout_alignStart="@+id/flash"
+                android:layout_below="@+id/flash"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/scale_icon"
-                android:text="" />
+                android:background="@drawable/scale_icon" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/level"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_alignLeft="@+id/button2"
-                android:layout_alignStart="@+id/button2"
-                android:layout_alignTop="@+id/button3"
+                android:layout_alignLeft="@+id/compass"
+                android:layout_alignStart="@+id/compass"
+                android:layout_alignTop="@+id/scale"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/level_icon"
-                android:text="" />
+                android:background="@drawable/level_icon" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/db_meter"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_alignLeft="@+id/button3"
-                android:layout_alignStart="@+id/button3"
-                android:layout_alignTop="@+id/button6"
-                android:background="@drawable/sound_meter_icon"
-                android:text="" />
+                android:layout_alignLeft="@+id/scale"
+                android:layout_alignStart="@+id/scale"
+                android:layout_alignTop="@+id/barcode_scanner"
+                android:background="@drawable/sound_meter_icon" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/barcode_scanner"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_alignLeft="@+id/button4"
-                android:layout_alignStart="@+id/button4"
-                android:layout_below="@+id/button4"
+                android:layout_alignLeft="@+id/level"
+                android:layout_alignStart="@+id/level"
+                android:layout_below="@+id/level"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/barcode_scanner_icon"
-                android:text=""
                 android:layout_marginBottom="20dp" />
 
             <TextView
@@ -99,24 +94,26 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textSize="45dp" />
 
-            <ImageButton
+            <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:id="@+id/imageButton"
+                android:id="@+id/wishlist"
                 android:background="@drawable/wish_list_icon"
                 android:layout_marginTop="20dp"
-                android:layout_below="@+id/button6"
-                android:layout_alignLeft="@+id/button6"
-                android:layout_alignStart="@+id/button6" />
+                android:layout_below="@+id/barcode_scanner"
+                android:layout_alignLeft="@+id/barcode_scanner"
+                android:layout_alignStart="@+id/barcode_scanner"
+                android:layout_marginBottom="20dp" />
 
-            <ImageButton
+            <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:id="@+id/imageButton2"
-                android:layout_alignTop="@+id/imageButton"
-                android:layout_alignLeft="@+id/button5"
-                android:layout_alignStart="@+id/button5"
-                android:background="@drawable/photo_meter_icon" />
+                android:id="@+id/photo_meter"
+                android:layout_alignTop="@+id/wishlist"
+                android:layout_alignLeft="@+id/db_meter"
+                android:layout_alignStart="@+id/db_meter"
+                android:background="@drawable/photo_meter_icon"
+                android:layout_marginBottom="20dp" />
 
         </RelativeLayout>
     </ScrollView>
