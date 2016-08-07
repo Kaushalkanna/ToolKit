@@ -11,6 +11,7 @@ import com.kaushal.toolkit.compass.CompassActivity;
 import com.kaushal.toolkit.db_meter.DbMeterActivity;
 import com.kaushal.toolkit.flash.FlashActivity;
 import com.kaushal.toolkit.level.LevelActivity;
+import com.kaushal.toolkit.scanwishlist.ScanWishListActivity;
 
 public class MainActivity extends AppCompatActivity {
     Animation alphaAnimation;
@@ -56,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void barcode_scanner_button(View view) {
         view.startAnimation(alphaAnimation);
+        Intent intent;
+        intent = new Intent(this, ScanWishListActivity.class);
+        startActivity(intent);
     }
 
     public void photo_meter_button(View view) {
