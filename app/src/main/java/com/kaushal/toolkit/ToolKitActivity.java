@@ -13,13 +13,13 @@ import com.kaushal.toolkit.flash.FlashActivity;
 import com.kaushal.toolkit.level.LevelActivity;
 import com.kaushal.toolkit.scanwishlist.ScanWishListActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class ToolKitActivity extends AppCompatActivity {
     Animation alphaAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.toolkit_main);
         alphaAnimation = AnimationUtils.loadAnimation(this, R.anim.button_alpha);
     }
 
