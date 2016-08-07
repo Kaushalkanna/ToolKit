@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".flash.FlashActivity"> </activity>
+        <activity android:name=".compass.CompassActivity"> </activity>
     </application>
 
 </manifest>
