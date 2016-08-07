@@ -9,6 +9,7 @@ import android.view.animation.AnimationUtils;
 
 import com.kaushal.toolkit.compass.CompassActivity;
 import com.kaushal.toolkit.flash.FlashActivity;
+import com.kaushal.toolkit.level.LevelActivity;
 
 public class MainActivity extends AppCompatActivity {
     Animation alphaAnimation;
@@ -34,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void level_button(View view) {
+        view.startAnimation(alphaAnimation);
+        Intent intent;
+        intent = new Intent(this, LevelActivity.class);
+        startActivity(intent);
+    }
+
     public void barcode_scanner_button(View view) {
         view.startAnimation(alphaAnimation);
     }
@@ -43,10 +51,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void db_meter_button(View view) {
-        view.startAnimation(alphaAnimation);
-    }
-
-    public void level_button(View view) {
         view.startAnimation(alphaAnimation);
     }
 
