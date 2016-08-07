@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import com.kaushal.toolkit.compass.CompassActivity;
 import com.kaushal.toolkit.flash.FlashActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
         view.startAnimation(alphaAnimation);
         Intent intent;
         intent = new Intent(this, FlashActivity.class);
+        startActivity(intent);
+    }
+
+    public void compass_button(View view) {
+        view.startAnimation(alphaAnimation);
+        Intent intent;
+        intent = new Intent(this, CompassActivity.class);
         startActivity(intent);
     }
 
@@ -43,10 +51,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void scale_button(View view) {
-        view.startAnimation(alphaAnimation);
-    }
-
-    public void compass_button(View view) {
         view.startAnimation(alphaAnimation);
     }
 
