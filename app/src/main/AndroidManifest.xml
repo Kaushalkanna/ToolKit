@@ -28,6 +28,7 @@
         <activity android:name=".wishlist.ScanWishListActivity"> </activity>
         <activity android:name=".scanner.ScannerActivity"> </activity>
         <activity android:name=".wishlist.WishListActivity"> </activity>
+        <activity android:name=".scale.ScaleActivity"> </activity>
     </application>
 
 </manifest>
