@@ -121,7 +121,7 @@
                 android:layout_alignStart="@+id/db_meter"
                 android:background="@drawable/photo_meter_icon"
                 android:layout_marginBottom="20dp"
-                android:onClick="photo_meter_button"/>
+                android:onClick="light_meter_button"/>
 
         </RelativeLayout>
     </ScrollView>

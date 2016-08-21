@@ -29,6 +29,7 @@
         <activity android:name=".scanner.ScannerActivity"> </activity>
         <activity android:name=".wishlist.WishListActivity"> </activity>
         <activity android:name=".scale.ScaleActivity"> </activity>
+        <activity android:name=".light_meter.LightMeterActivity"> </activity>
     </application>
 
 </manifest>
