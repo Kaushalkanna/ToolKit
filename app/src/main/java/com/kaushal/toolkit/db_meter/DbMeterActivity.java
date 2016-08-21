@@ -40,7 +40,7 @@ public class DbMeterActivity extends Activity implements AudioInputListener {
     double differenceFromNominal = 0.0;
     double smoothedRms;
     double mAlpha = 0.9;
-    private int sampleRate;
+    private int sampleRate = 8000;
     private int audioSource;
     private volatile boolean drawing;
     private volatile int drawingCollided;
@@ -50,6 +50,7 @@ public class DbMeterActivity extends Activity implements AudioInputListener {
     int graphXMax = 250;
     int graphYMin = 0;
     int graphYMax = 120;
+    private double gainIncrementValue;
 
 
     @Override
@@ -83,6 +84,11 @@ public class DbMeterActivity extends Activity implements AudioInputListener {
         staticLabelsFormatter.setVerticalLabels(new String[] {"0", "30", "60", "90", "120"});
         graph.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter);
         graph.setClickable(true);
+
+        readPreferences();
+        micInput.setSampleRate(sampleRate);
+        micInput.setAudioSource(audioSource);
+        gainDb.setText(""+differenceFromNominal);
 
         ToggleButton.OnClickListener toggleButtonListener = new ToggleButton.OnClickListener() {
             @Override
@@ -133,9 +139,6 @@ public class DbMeterActivity extends Activity implements AudioInputListener {
     }
 
     private void startListening() {
-        readPreferences();
-        micInput.setSampleRate(sampleRate);
-        micInput.setAudioSource(audioSource);
         micInput.start();
         graph.addSeries(graphData);
     }
@@ -179,6 +182,7 @@ public class DbMeterActivity extends Activity implements AudioInputListener {
             differenceFromNominal -= gainIncrement;
             DecimalFormat df = new DecimalFormat("##.# dB");
             gainDb.setText(df.format(differenceFromNominal));
+            DbMeterActivity.this.setPreferences();
         }
     }
 
@@ -235,12 +239,14 @@ public class DbMeterActivity extends Activity implements AudioInputListener {
         SharedPreferences preferences = getSharedPreferences("SoundLevelMeter", MODE_PRIVATE);
         sampleRate = preferences.getInt("SampleRate", 8000);
         audioSource = preferences.getInt("AudioSource", MediaRecorder.AudioSource.VOICE_RECOGNITION);
+        differenceFromNominal = preferences.getInt("Difference", 0);
     }
 
     private void setPreferences() {
         SharedPreferences preferences = getSharedPreferences("SoundLevelMeter", MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putInt("SampleRate", sampleRate);
+        editor.putInt("Difference", (int)differenceFromNominal);
         editor.apply();
     }
 }
