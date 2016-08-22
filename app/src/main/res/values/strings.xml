@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">ToolKit</string>
+    <string name="app_name">Tool Kit</string>
+    <string name="app_heading">Smart Tools</string>
     <string name="settings_ok">OK</string>
     <string name="adjust_sensitivity">Calibrate sensitivity</string>
     <string name="minus_5_db">-5\ndB</string>
@@ -14,4 +15,9 @@
         <item>8000</item>
         <item>16000</item>
     </string-array>
+    <string name="light_meter_unit">lux</string>
+    <string name="initial_value">0</string>
+    <string name="min_lux">Min:</string>
+    <string name="max_lux">Max:</string>
+    <string name="avg_lux">Avg:</string>
 </resources>

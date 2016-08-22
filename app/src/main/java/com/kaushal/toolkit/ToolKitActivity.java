@@ -6,12 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Toast;
 
 import com.kaushal.toolkit.compass.CompassActivity;
 import com.kaushal.toolkit.db_meter.DbMeterActivity;
 import com.kaushal.toolkit.flash.FlashActivity;
 import com.kaushal.toolkit.level.LevelActivity;
+import com.kaushal.toolkit.light_meter.LightMeterActivity;
 import com.kaushal.toolkit.scale.ScaleActivity;
 import com.kaushal.toolkit.scanner.ScannerActivity;
 import com.kaushal.toolkit.wishlist.WishListActivity;
@@ -72,9 +72,11 @@ public class ToolKitActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void photo_meter_button(View view) {
+    public void light_meter_button(View view) {
         view.startAnimation(alphaAnimation);
-        Toast.makeText(ToolKitActivity.this, "In progress", Toast.LENGTH_SHORT).show();
+        Intent intent;
+        intent = new Intent(this, LightMeterActivity.class);
+        startActivity(intent);
     }
 
     public void wishlist_button(View view) {
