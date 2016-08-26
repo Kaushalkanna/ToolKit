@@ -14,6 +14,7 @@ import com.kaushal.toolkit.flash.FlashActivity;
 import com.kaushal.toolkit.level.LevelActivity;
 import com.kaushal.toolkit.light_meter.LightMeterActivity;
 import com.kaushal.toolkit.magneto_meter.MagnetoMeterActivity;
+import com.kaushal.toolkit.pressure_meter.PressureMeterActivity;
 import com.kaushal.toolkit.scale.ScaleActivity;
 import com.kaushal.toolkit.scanner.ScannerActivity;
 import com.kaushal.toolkit.wishlist.WishListActivity;
@@ -100,7 +101,9 @@ public class ToolKitActivity extends AppCompatActivity {
 
     public void pressure_meter_button(View view) {
         view.startAnimation(alphaAnimation);
-        Toast.makeText(this, "In progress", Toast.LENGTH_SHORT).show();
+        Intent intent;
+        intent = new Intent(this, PressureMeterActivity.class);
+        startActivity(intent);
     }
 
     public void magneto_meter_button(View view) {

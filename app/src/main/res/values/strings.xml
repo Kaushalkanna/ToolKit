@@ -20,4 +20,5 @@
     <string name="min_lux">Min:</string>
     <string name="max_lux">Max:</string>
     <string name="avg_lux">Avg:</string>
+    <string name="pressure_meter_unit">hPa</string>
 </resources>

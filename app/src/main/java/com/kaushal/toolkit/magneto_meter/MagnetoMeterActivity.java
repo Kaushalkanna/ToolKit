@@ -16,6 +16,7 @@ public class MagnetoMeterActivity extends Activity implements MagnetoMeterListen
 
     private static Context context;
     public DecimalFormat df = new DecimalFormat("#.#");
+    public String magneticMeterUnit =  " \u00B5" + "T"; // Micro Tesla unit of magnetic flux density
 
     /** Called when the activity is first created. */
     @Override
@@ -46,9 +47,9 @@ public class MagnetoMeterActivity extends Activity implements MagnetoMeterListen
 
     @Override
     public void onCompassChanged(float x, float y, float z) {
-        ((TextView) findViewById(R.id.x)).setText(String.valueOf(df.format(x)));
-        ((TextView) findViewById(R.id.y)).setText(String.valueOf(df.format(y)));
-        ((TextView) findViewById(R.id.z)).setText(String.valueOf(df.format(z)));
+        ((TextView) findViewById(R.id.x)).setText(String.valueOf(df.format(x)) + magneticMeterUnit);
+        ((TextView) findViewById(R.id.y)).setText(String.valueOf(df.format(y)) + magneticMeterUnit);
+        ((TextView) findViewById(R.id.z)).setText(String.valueOf(df.format(z)) + magneticMeterUnit);
     }
 
 }
