@@ -16,7 +16,7 @@ import com.kaushal.toolkit.R;
 import java.text.DecimalFormat;
 
 /**
- * Created by xkxd061 on 8/26/16.
+ * Created by Kaushal Dontula on 8/26/16.
  */
 public class MagnetoMeterActivity extends Activity implements SensorEventListener {
 

@@ -9,7 +9,7 @@ import android.hardware.SensorManager;
 import java.util.List;
 
 /**
- * Created by xkxd061 on 8/5/16.
+ * Created by Kaushal Dontula on 8/5/16.
  */
 public class LevelManager {
 

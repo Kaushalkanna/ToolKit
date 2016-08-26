@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.kaushal.toolkit.R;
 
 /**
- * Created by xkxd061 on 8/26/16.
+ * Created by Kaushal Dontula on 8/26/16.
  */
 public class PressureMeterActivity extends Activity implements SensorEventListener {
 
