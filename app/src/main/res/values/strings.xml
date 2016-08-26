@@ -21,4 +21,5 @@
     <string name="max_lux">Max:</string>
     <string name="avg_lux">Avg:</string>
     <string name="pressure_meter_unit">hPa</string>
+    <string name="thermo_meter_unit">"\u00B0"C</string>
 </resources>

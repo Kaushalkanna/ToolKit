@@ -1,6 +1,7 @@
 package com.kaushal.toolkit;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -17,6 +18,7 @@ import com.kaushal.toolkit.magneto_meter.MagnetoMeterActivity;
 import com.kaushal.toolkit.pressure_meter.PressureMeterActivity;
 import com.kaushal.toolkit.scale.ScaleActivity;
 import com.kaushal.toolkit.scanner.ScannerActivity;
+import com.kaushal.toolkit.thermo_meter.ThermoMeterAvtivity;
 import com.kaushal.toolkit.wishlist.WishListActivity;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -96,7 +98,15 @@ public class ToolKitActivity extends AppCompatActivity {
 
     public void thermo_meter_button(View view) {
         view.startAnimation(alphaAnimation);
-        Toast.makeText(this, "In progress", Toast.LENGTH_SHORT).show();
+        PackageManager manager = getPackageManager();
+        boolean hasThermometer = manager.hasSystemFeature(PackageManager.FEATURE_SENSOR_AMBIENT_TEMPERATURE);
+        if (hasThermometer){
+        Intent intent;
+        intent = new Intent(this, ThermoMeterAvtivity.class);
+        startActivity(intent);
+        }else{
+            Toast.makeText(this, "Sorry! AMBIENT TEMPERATURE sensor not available", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void pressure_meter_button(View view) {

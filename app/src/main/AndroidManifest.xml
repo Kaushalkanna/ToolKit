@@ -32,6 +32,7 @@
         <activity android:name=".light_meter.LightMeterActivity"> </activity>
         <activity android:name=".magneto_meter.MagnetoMeterActivity"> </activity>
         <activity android:name=".pressure_meter.PressureMeterActivity"> </activity>
+        <activity android:name=".thermo_meter.ThermoMeterAvtivity"> </activity>
     </application>
 
 </manifest>

@@ -47,9 +47,16 @@ public class MagnetoMeterActivity extends Activity implements MagnetoMeterListen
 
     @Override
     public void onCompassChanged(float x, float y, float z) {
-        ((TextView) findViewById(R.id.x)).setText(String.valueOf(df.format(x)) + magneticMeterUnit);
-        ((TextView) findViewById(R.id.y)).setText(String.valueOf(df.format(y)) + magneticMeterUnit);
-        ((TextView) findViewById(R.id.z)).setText(String.valueOf(df.format(z)) + magneticMeterUnit);
+        TextView xValue = (TextView) findViewById(R.id.x);
+        TextView yValue = (TextView) findViewById(R.id.y);
+        TextView zValue = (TextView) findViewById(R.id.z);
+        TextView magneticFieldValue = (TextView) findViewById(R.id.magneticField);
+
+        xValue.setText(String.valueOf(df.format(x)) + magneticMeterUnit);
+        yValue.setText(String.valueOf(df.format(y)) + magneticMeterUnit);
+        zValue.setText(String.valueOf(df.format(z)) + magneticMeterUnit);
+        float magneticField = (float) Math.sqrt((x * x) + (y * y)+ (z * z));
+        magneticFieldValue.setText(String.valueOf(df.format(magneticField)) + magneticMeterUnit);
     }
 
 }
