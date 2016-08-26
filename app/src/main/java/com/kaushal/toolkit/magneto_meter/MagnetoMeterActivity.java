@@ -3,6 +3,7 @@ package com.kaushal.toolkit.magneto_meter;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.widget.TextView;
 
 import com.kaushal.toolkit.R;
@@ -15,8 +16,9 @@ import java.text.DecimalFormat;
 public class MagnetoMeterActivity extends Activity implements MagnetoMeterListener {
 
     private static Context context;
-    public DecimalFormat df = new DecimalFormat("#.#");
-    public String magneticMeterUnit =  " \u00B5" + "T"; // Micro Tesla unit of magnetic flux density
+    private DecimalFormat df = new DecimalFormat("#.#");
+    private String magneticMeterUnit =  " \u00B5" + "T"; // Micro Tesla unit of magnetic flux density
+    private int vibrationDuration = 50;
 
     /** Called when the activity is first created. */
     @Override
@@ -56,6 +58,10 @@ public class MagnetoMeterActivity extends Activity implements MagnetoMeterListen
         yValue.setText(String.valueOf(df.format(y)) + magneticMeterUnit);
         zValue.setText(String.valueOf(df.format(z)) + magneticMeterUnit);
         float magneticField = (float) Math.sqrt((x * x) + (y * y)+ (z * z));
+        if (magneticField > 300) {
+            Vibrator v = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+            v.vibrate(vibrationDuration);
+        }
         magneticFieldValue.setText(String.valueOf(df.format(magneticField)) + magneticMeterUnit);
     }
 
