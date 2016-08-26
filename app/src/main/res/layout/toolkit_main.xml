@@ -123,6 +123,54 @@
                 android:layout_marginBottom="20dp"
                 android:onClick="light_meter_button"/>
 
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/vibration_meter"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/photo_meter"
+                android:layout_alignLeft="@+id/photo_meter"
+                android:layout_alignStart="@+id/photo_meter"
+                android:background="@drawable/vibration_meter_icon"
+                android:layout_marginBottom="20dp"
+                android:onClick="vibration_meter_button"/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/thermo_meter"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/wishlist"
+                android:layout_alignLeft="@+id/wishlist"
+                android:layout_alignStart="@+id/wishlist"
+                android:background="@drawable/thermometer_icon"
+                android:layout_marginBottom="20dp"
+                android:onClick="thermo_meter_button"/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/pressure_meter"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/vibration_meter"
+                android:layout_alignLeft="@+id/vibration_meter"
+                android:layout_alignStart="@+id/vibration_meter"
+                android:background="@drawable/pressure_meter_icon"
+                android:layout_marginBottom="20dp"
+                android:onClick="pressure_meter_button"/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/magneto_meter"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/thermo_meter"
+                android:layout_alignLeft="@+id/thermo_meter"
+                android:layout_alignStart="@+id/thermo_meter"
+                android:background="@drawable/magneto_meter_icon"
+                android:layout_marginBottom="20dp"
+                android:onClick="magneto_meter_button"/>
+
         </RelativeLayout>
     </ScrollView>
 </LinearLayout>

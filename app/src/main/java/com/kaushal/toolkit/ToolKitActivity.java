@@ -6,12 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Toast;
 
 import com.kaushal.toolkit.compass.CompassActivity;
 import com.kaushal.toolkit.db_meter.DbMeterActivity;
 import com.kaushal.toolkit.flash.FlashActivity;
 import com.kaushal.toolkit.level.LevelActivity;
 import com.kaushal.toolkit.light_meter.LightMeterActivity;
+import com.kaushal.toolkit.magneto_meter.MagnetoMeterActivity;
 import com.kaushal.toolkit.scale.ScaleActivity;
 import com.kaushal.toolkit.scanner.ScannerActivity;
 import com.kaushal.toolkit.wishlist.WishListActivity;
@@ -83,6 +85,28 @@ public class ToolKitActivity extends AppCompatActivity {
         view.startAnimation(alphaAnimation);
         Intent intent;
         intent = new Intent(this, WishListActivity.class);
+        startActivity(intent);
+    }
+
+    public void vibration_meter_button(View view) {
+        view.startAnimation(alphaAnimation);
+        Toast.makeText(this, "In progress", Toast.LENGTH_SHORT).show();
+    }
+
+    public void thermo_meter_button(View view) {
+        view.startAnimation(alphaAnimation);
+        Toast.makeText(this, "In progress", Toast.LENGTH_SHORT).show();
+    }
+
+    public void pressure_meter_button(View view) {
+        view.startAnimation(alphaAnimation);
+        Toast.makeText(this, "In progress", Toast.LENGTH_SHORT).show();
+    }
+
+    public void magneto_meter_button(View view) {
+        view.startAnimation(alphaAnimation);
+        Intent intent;
+        intent = new Intent(this, MagnetoMeterActivity.class);
         startActivity(intent);
     }
 }
