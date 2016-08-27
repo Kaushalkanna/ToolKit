@@ -3,43 +3,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Level:"
-        android:id="@+id/level"
-        android:layout_alignTop="@+id/value"
-        android:layout_toLeftOf="@+id/imageView"
-        android:layout_toStartOf="@+id/imageView" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Not Supported"
-        android:id="@+id/value"
-        android:layout_above="@+id/imageView1"
-        android:layout_toRightOf="@+id/imageView"
-        android:layout_toEndOf="@+id/imageView"
-        android:layout_marginBottom="43dp" />
-
 
     <ImageView
-        android:layout_width="144dp"
-        android:layout_height="170dp"
-        android:id="@+id/imageView1"
-        android:src="@drawable/redbox"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageViewX"
         android:src="@drawable/bubble"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="37dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginStart="64dp"
+        android:layout_below="@+id/textView9"
+        android:layout_alignStart="@+id/textView9" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageViewY"
+        android:src="@drawable/bubble"
+
+        android:layout_alignTop="@+id/imageViewXY"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="23dp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageViewXY"
+        android:src="@drawable/bubble"
+
+        android:layout_below="@+id/imageViewX"
+        android:layout_alignStart="@+id/imageViewX"
+        android:layout_marginTop="169dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Bubble Level"
+        android:id="@+id/textView9"
+        android:layout_marginTop="37dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40dp" />
 
 
 </RelativeLayout>
