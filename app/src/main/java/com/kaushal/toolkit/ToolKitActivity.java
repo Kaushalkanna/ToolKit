@@ -19,6 +19,7 @@ import com.kaushal.toolkit.pressure_meter.PressureMeterActivity;
 import com.kaushal.toolkit.scale.ScaleActivity;
 import com.kaushal.toolkit.scanner.ScannerActivity;
 import com.kaushal.toolkit.thermo_meter.ThermoMeterAvtivity;
+import com.kaushal.toolkit.vibration_meter.VibrationMeterActivity;
 import com.kaushal.toolkit.wishlist.WishListActivity;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -93,7 +94,9 @@ public class ToolKitActivity extends AppCompatActivity {
 
     public void vibration_meter_button(View view) {
         view.startAnimation(alphaAnimation);
-        Toast.makeText(this, "In progress", Toast.LENGTH_SHORT).show();
+        Intent intent;
+        intent = new Intent(this, VibrationMeterActivity.class);
+        startActivity(intent);
     }
 
     public void thermo_meter_button(View view) {
